@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_bigger_80">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/item_repo_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_great_72">
+
+        <EditText
+            android:id="@+id/item_repo_et"
+            style="@style/item_text_input_layout"
+            android:hint="@string/layout_text_repo"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/item_repo_iv"
+        style="@style/icon"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="@dimen/margin_normal_24"
+        android:layout_marginTop="@dimen/margin_normal_24"
+        android:src="@drawable/eye"/>
+</RelativeLayout>

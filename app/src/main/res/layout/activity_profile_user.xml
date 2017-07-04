@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 android:id="@+id/main_coordinator_container"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentScrim="@color/color_primary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/user_photo_img"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_profile_image"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user_bg"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+
+                android:titleTextColor="@color/white"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_stat_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:behaviour_max_padding="@dimen/padding_large_24"
+        app:layout_behavior=".ui.behaviors.StatisticPanelBehavior">
+
+        <LinearLayout
+            style="@style/panel_item"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/main_tv_raiting"
+                style="@style/panel_sub_item"
+                android:text="5"
+                android:textSize="@dimen/font_enlarge_24"/>
+
+            <TextView
+                style="@style/panel_sub_item"
+                android:text="@string/panel_raiting"
+                android:textSize="@dimen/font_increased_16"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/size_delimeter_line"
+            android:layout_height="@dimen/spacing_large_56"
+            android:background="@color/grey_light"/>
+
+        <LinearLayout
+            style="@style/panel_item"
+            android:layout_gravity="center"
+            android:layout_weight="2">
+
+            <TextView
+                android:id="@+id/main_tv_code_lines"
+                style="@style/panel_sub_item"
+                android:text="25000"
+                android:textSize="@dimen/font_enlarge_24"/>
+
+            <TextView
+                style="@style/panel_sub_item"
+                android:text="@string/panel_count_code_strings"
+                android:textSize="@dimen/font_increased_16"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/size_delimeter_line"
+            android:layout_height="@dimen/spacing_large_56"
+            android:background="@color/grey_light"/>
+
+        <LinearLayout
+            style="@style/panel_item"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/main_tv_projects"
+                style="@style/panel_sub_item"
+                android:text="5"
+                android:textSize="@dimen/font_enlarge_24"/>
+
+            <TextView
+                style="@style/panel_sub_item"
+                android:text="@string/panel_projects"
+                android:textSize="@dimen/font_increased_16"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/static_profile_content"/>
+
+</android.support.design.widget.CoordinatorLayout>

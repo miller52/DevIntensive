@@ -68,11 +68,10 @@ import retrofit2.Response;
 public class MainActivity extends BaseActivity {
 
     public static final String TAG = ConstantManager.TAG_PREFIX + MainActivity.class.getSimpleName();
-    private boolean mCurrentEditMode = false;
-    private AppBarLayout.LayoutParams mAppBarParams = null;
-    private File mPhotoFile = null;
-    private Uri mSelectedImage = null;
-
+    private final int PROFILE_ET_PHONE_POSITION = 0;
+    private final int PROFILE_ET_EMAIL_POSITION = 1;
+    private final int PROFILE_ET_VK_POSITION = 2;
+    private final int PROFILE_ET_GITHUB_POSITION = 3;
     @BindView(R.id.navigation_drawer)
     DrawerLayout mDrawerLayout;
     @BindView(R.id.main_coordinator_container)
@@ -104,11 +103,10 @@ public class MainActivity extends BaseActivity {
 
     @BindViews({R.id.main_tv_raiting, R.id.main_tv_code_lines, R.id.main_tv_projects})
     List<TextView> mUserValuesViews;
-
-    private final int PROFILE_ET_PHONE_POSITION = 0;
-    private final int PROFILE_ET_EMAIL_POSITION = 1;
-    private final int PROFILE_ET_VK_POSITION = 2;
-    private final int PROFILE_ET_GITHUB_POSITION = 3;
+    private boolean mCurrentEditMode = false;
+    private AppBarLayout.LayoutParams mAppBarParams = null;
+    private File mPhotoFile = null;
+    private Uri mSelectedImage = null;
     private boolean mPhotoIsChanged = false;
 
     /**
@@ -584,16 +582,16 @@ public class MainActivity extends BaseActivity {
         //((TextInputLayout) findViewById(R.id.til_email)).setOnFocusChangeListener(focusListener);
     }
 
-    private void setValidators () {
+    private void setValidators() {
         final String PHONE_REGEXP = "^[\\d\\(\\)\\-+ ]{11,20}$";
         final String EMAIL_REGEXP = "^[A-Za-z0-9+_.-]{3,}+@([A-Za-z0-9+_.-]{2,})+\\.+[a-zA-Z]{2,}$";
         final String VK_REGEXP = "^vk\\.com\\/[\\w]{3,}+$";
         final String GITHUB_REGEXP = "^github\\.com\\/[\\w]{3,}+$";
 
-        mUserInfoList.get(PROFILE_ET_PHONE_POSITION).addTextChangedListener(new ProfileDataTextWatcher(Pattern.compile(PHONE_REGEXP),mTilPhone));
-        mUserInfoList.get(PROFILE_ET_EMAIL_POSITION).addTextChangedListener(new ProfileDataTextWatcher(Pattern.compile(EMAIL_REGEXP),mTilEmail));
-        mUserInfoList.get(PROFILE_ET_VK_POSITION).addTextChangedListener(new ProfileDataTextWatcher(Pattern.compile(VK_REGEXP),mTilVk));
-        mUserInfoList.get(PROFILE_ET_GITHUB_POSITION).addTextChangedListener(new ProfileDataTextWatcher(Pattern.compile(GITHUB_REGEXP),mTilGitHub));
+        mUserInfoList.get(PROFILE_ET_PHONE_POSITION).addTextChangedListener(new ProfileDataTextWatcher(Pattern.compile(PHONE_REGEXP), mTilPhone));
+        mUserInfoList.get(PROFILE_ET_EMAIL_POSITION).addTextChangedListener(new ProfileDataTextWatcher(Pattern.compile(EMAIL_REGEXP), mTilEmail));
+        mUserInfoList.get(PROFILE_ET_VK_POSITION).addTextChangedListener(new ProfileDataTextWatcher(Pattern.compile(VK_REGEXP), mTilVk));
+        mUserInfoList.get(PROFILE_ET_GITHUB_POSITION).addTextChangedListener(new ProfileDataTextWatcher(Pattern.compile(GITHUB_REGEXP), mTilGitHub));
     }
 
     /**
@@ -606,7 +604,7 @@ public class MainActivity extends BaseActivity {
         if (mCurrentEditMode) {
             mUserInfoList.get(PROFILE_ET_PHONE_POSITION).requestFocus();
             mUserInfoList.get(PROFILE_ET_PHONE_POSITION).setSelection(mUserInfoList.get(PROFILE_ET_PHONE_POSITION).getText().length());
-        } else if (mPhotoIsChanged){
+        } else if (mPhotoIsChanged) {
             mPhotoIsChanged = false;
             if (NetworkHelper.isNetworkAvailable(this)) {
                 Call<UploadProfilePhotoRes> call = DataManager.getInstance().uploadPhoto(DataManager.getInstance().getPreferenceManager().getUserId(), mPhotoFile);
