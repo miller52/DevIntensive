@@ -16,10 +16,10 @@
     <string name="panel_raiting">Рейтинг</string>
     <string name="panel_count_code_strings">Написано строк кода</string>
     <string name="panel_projects">Проектов</string>
-    <string name="default_github">https://github.com/RNOVOSELOV/DevIntensive</string>
-    <string name="default_vk">vk.com/novoselov_roman</string>
+    <string name="default_github">https://github.com/miller52/DevIntensive</string>
+    <string name="default_vk">vk.com/miller52</string>
     <string name="default_email">my_mail@mail.my</string>
-    <string name="default_phone">+79027888883</string>
+    <string name="default_phone">+79101285834</string>
     <string name="add_photo_placeholder">Изменить фотографию профиля</string>
     <string name="user_profile_gallery_dialog">Выбрать из галереи</string>
     <string name="user_profile_camera_dialog">Сделать фото</string>
