@@ -1,3 +1,61 @@
 <resources>
-    <string name="app_name">DevIntensive</string>
+    <string name="app_name">Новоселов Роман</string>
+    <string name="layout_text_mobile_phone">Мобильный телефон</string>
+    <string name="layout_text_e_mail">E-mail</string>
+    <string name="layout_text_vk">Профиль VK</string>
+    <string name="layout_text_repo">Репозиторий</string>
+    <string name="layout_text_about">О себе</string>
+    <string name="default_about">...Массивный, толстый молодой человек с стриженою головой, в очках… Пьер был
+        несколько больше других мужчин в комнате… Умный и вместе робкий, наблюдательный и естественный взгляд,
+        отличавший его от всех в этой гостиной… Улыбка у него была не такая, какая у других людей, сливающаяся
+        с неулыбкой. У него, напротив, когда приходила улыбка, то вдруг, мгновенно исчезало серьёзное и даже
+        несколько угрюмое лицо и являлось другое — детское, доброе, даже глуповатое и как бы просящее прощения...
+        Толстый, выше обыкновенного роста, широкий, с огромными красными руками, он, как говорится, не умел войти
+        в салон и ещё менее умел из него выйти... Кроме того, он был рассеян... Но вся его рассеянность и неуменье
+        войти в салон и говорить в нём выкупались выражением добродушия, простоты и скромности.</string>
+    <string name="panel_raiting">Рейтинг</string>
+    <string name="panel_count_code_strings">Написано строк кода</string>
+    <string name="panel_projects">Проектов</string>
+    <string name="default_github">https://github.com/RNOVOSELOV/DevIntensive</string>
+    <string name="default_vk">vk.com/novoselov_roman</string>
+    <string name="default_email">my_mail@mail.my</string>
+    <string name="default_phone">+79027888883</string>
+    <string name="add_photo_placeholder">Изменить фотографию профиля</string>
+    <string name="user_profile_gallery_dialog">Выбрать из галереи</string>
+    <string name="user_profile_camera_dialog">Сделать фото</string>
+    <string name="user_profile_cancel_dialog">Отмена</string>
+    <string name="user_profile_gallery_picker">Выберите фото</string>
+    <string name="error_create_tempfile">Ошибка открытия камеры</string>
+    <string name="string_need_permissions">Необходимо дать разрешения</string>
+    <string name="string_allow">Разрешить</string>
+    <string name="string_warning_does_not_match_activity">Не найдено приложений для выполнения данного действия</string>
+    <string name="error_no_data">Необходимо заполнить поле</string>
+    <string name="error_uncorrect_data">Введены некорректные данные</string>
+
+    <string name="auth.authorization_enter">Войти</string>
+    <string name="auth.email">Введите e-mail</string>
+    <string name="auth.password">Введите пароль</string>
+    <string name="auth.login">Войти</string>
+    <string name="auth.remember">Забыли пароль?</string>
+    <string name="string_item_user_goto">Просмотр</string>
+    <string name="hint_search">Поиск</string>
+    <string name="auth_layout_save_login_cb">Запомнить логин</string>
+    <string name="auth_network_error">Произошла ошибка работы с сетью, необходима повторная аутотентификация.</string>
+    <string name="auth_save_users_error">Ошибка сохранения пользователей.</string>
+
+    <string name="auth_devintensive_forgot_pass_url" translatable="false">http://devintensive.softdesign-apps.ru/forgotpass</string>
+    <string name="auth_incorrect_login_or_password">Неверный логин или пароль</string>
+    <string name="auth_something_wrong">Видимо что-то случилось</string>
+    <string name="auth_login_error">Ошибка входа, попробуйте позже</string>
+    <string name="auth_network_is_not_availabled">Сеть недоступна, попробуйте позже</string>
+    <string name="auth_can_not_receive_users_list">Список пользователей не может быть получен.</string>
+    <string name="auth_json_parse_error">Непорядок!</string>
+    <string name="auth_retrofit_error">Ошибочка вышла!</string>
+    <string name="main_photo_uploaded">Фото успешно загружено</string>
+    <string name="main_something_wrong">Видимо что-то случилось</string>
+    <string name="main_upload_error">Ошибка загрузки, попробуйте позже</string>
+    <string name="main_network_is_nor_available">Сеть недоступна</string>
+    <string name="list_emty_list">Список пользователей пуст</string>
+    <string name="list_error_download_users_list">Ошибка загрузки списка пользователей</string>
+    <string name="list_enter_users_name">Введите имя или его часть</string>
 </resources>
